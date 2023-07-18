@@ -60,10 +60,6 @@ node_modules/
 /build
 /dist
 
-#ignore package.json for mdb
-#package.json
-katundastudio
-katundastudio.pub
 # ignore composer vendor directory
 /vendor
 
