@@ -42,20 +42,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
+  <script src="https://unpkg.com/scrollreveal"></script>
+
   <style>
     :root {
       --bg-color: #171620;
-      /* --second-bg-color: #fc8a00; */
-      --second-bg-color: rgb(13, 110, 253);
+      --second-bg-color: #fc8a00;
+      --third-bg-color: rgb(1, 24, 58);
       --text-color: #f0e113;
     }
 
     html {
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', sans-serif;
+
     }
 
     .card-title {
-      color: var(--second-bg-color);
+      color: var(--third-bg-color);
       font-weight: bold;
     }
 
@@ -63,10 +66,13 @@
       font-weight: bold;
     }
 
+    .card-body p {
+      display: none;
+    }
+
     #mynavbar ul li a {
       color: var(--second-bg-color);
-      transition: all 0.8s;
-      /*        text-align: center; */
+      transition: all .8s;
     }
 
     #mynavbar ul li a:hover {
@@ -104,6 +110,7 @@
         margin-top: 10px;
       }
 
+
       .page-footer {
         display: none;
       }
@@ -140,10 +147,15 @@
     .top:hover {
       opacity: 1;
     }
+
+    .card-img-top {
+      height: 20rem;
+      object-position: top;
+    }
   </style>
 </head>
 
-<body>
+<body class="body col-xxl-9 mx-auto">
   <nav class="navbar navbar-expand-sm shadow-lg my-3 sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#top">
@@ -176,10 +188,16 @@
             <a class="nav-link" href="./gallery.html">Gallery</a>
           </li>
         </ul>
+        <!-- Theme Toggle Button
+        <div class="form-check form-switch me-0 my-0">
+          <label class="form-check-label" for="lightSwitch">
+            <i class="bi bi-brightness-high"></i>
+          </label>
+          <input class="form-check-input" type="checkbox" id="lightSwitch" />
+        </div> -->
       </div>
     </div>
   </nav>
-
 
   <main id="top">
     <div class="container-fluid">
@@ -197,28 +215,16 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/prize.webp" alt="New York" class="d-block w-100 rounded img-fluid"
+                <img src="./images/KSbanner.webp" alt="New York" class="d-block w-100 rounded img-fluid"
                   style="object-fit: cover; height: 400px; width: 100%;">
-                <div class="carousel-caption">
-                  <h3>Closeups</h3>
-                  <p>High quality imagery!</p>
-                </div>
               </div>
               <div class="carousel-item ">
-                <img src="images/Outdoor1.webp" alt="New York" class="d-block w-100 rounded img-fluid"
+                <img src="./images/katunda.webp" alt="New York" class="rounded img-fluid"
                   style="object-fit: cover; height: 400px; width: 100%;">
-                <div class="carousel-caption">
-                  <h3>Outdoors</h3>
-                  <p>Not limited to indoors!</p>
-                </div>
               </div>
               <div class="carousel-item">
-                <img src="images/Background-Finn.webp" class="d-block w-100 rounded img-fluid" alt=""
+                <img src="./images/monte.webp" class="d-block w-100 rounded img-fluid" alt=""
                   style="object-fit: cover; height: 400px; width: 100%;">
-                <div class="carousel-caption">
-                  <h3>Portraits</h3>
-                  <p>It's is always so much fun!</p>
-                </div>
               </div>
             </div>
 
@@ -260,139 +266,138 @@
     <div id="services" class="container-fluid">
       <div class="row my-5">
         <h2 class="text-center mb-5">OUR SERVICES</h2>
-        <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-          <img class="card-img-top" src="images/video.webp" alt="Card image" />
-          <div class="card-body">
-            <h4 class="card-title">VIDEO RECORDING</h4>
-            <p class="card-text text-start">Our skilled videographers at Katunda Studio
-              will capture the
-              essence of your event with stunning high-definition footage. We use
-              the latest equipment and editing techniques to create a
-              professional-quality video that you'll be proud to share andlook
-              back on in years to come.</p>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class="card border text-center" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/video.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">VIDEO RECORDING</h4>
+              <p class="card-text text-start">Our skilled videographers at Katunda Studio
+                will capture the
+                essence of your event with stunning high-definition footage. We use
+                the latest equipment and editing techniques to create a
+                professional-quality video that you'll be proud to share andlook
+                back on in years to come.</p>
+            </div>
+            <div class="card-footer">
+
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
           </div>
-          <div class="card-footer">
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card border text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/portrait.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">PORTRAITS</h4>
+              <p class="card-text text-start">Let us help you capture your unique
+                personality and style with a
+                personalized portrait session at Katunda Studio. Our experienced
+                photographers will work with you to create a beautiful and timeless
+                portrait that you'll treasure for years to come. We value your
+                needs.</p>
+            </div>
+            <div class="card-footer ">
 
-            <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card border text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/wedding.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">EVENT PHOTOSHOOT</h4>
+              <p class="card-text text-start">Our event photoshoot package is perfect for
+                capturing memories at
+                your next big event. Our talented photographers at Katunda Studio
+                will capture every moment of your special event, from candid shots
+                to posed group photos. We'll work with you to create a customized
+                photography package that perfectly fits your needs. We capture it
+                all.</p>
+            </div>
+            <div class="card-footer ">
+
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card border text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/indoor.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">INDOOR PHOTOSHOOT</h4>
+              <p class="card-text text-start">At Katunda Studio, we have a fully equipped
+                indoor photography
+                studio that is perfect for capturing beautiful images in a
+                controlled environment. Our team will work with you to create the
+                perfect lighting and set design to make your photoshoot truly
+                memorable and tailored to your preferences.</p>
+            </div>
+            <div class="card-footer">
+
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card border text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/outdoor.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">OUTDOOR PHOTOSHOOT</h4>
+              <p class="card-text text-start">Whether you're looking for a stunning natural
+                backdrop or an urban
+                cityscape, our outdoor photoshoots at Katunda Studio will capture
+                the beauty of your surroundings. Our experienced photographers will
+                work with you to find the perfect location and lighting to create
+                truly memorable images. Book your session today.</p>
+            </div>
+            <div class="card-footer">
+
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card border text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/family.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">FAMILY PHOTOSHOOT</h4>
+              <p class="card-text text-start">Family is everything, and we understand how
+                important it is to
+                capture those special moments with your loved ones. Our family
+                photoshoots at Katunda Studio are designed to be fun, relaxed, and
+                stress-free, so you can focus on making memories while we capture
+                them for you.</p>
+            </div>
+            <div class="card-footer">
+
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card border text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="./images/maternity.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">MATERNITY PHOTOSHOOT</h4>
+              <p class="card-text text-start">Pregnancy is a magical time in a woman's
+                life, and our maternity
+                photoshoots at Katunda Studio are designed to capture the beauty and
+                joy of this special time. Our experienced photographers will work
+                with you to create a personalized session that highlights your
+                unique style and personality.</p>
+            </div>
+            <div class="card-footer">
+
+              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-        <img class="card-img-top" src="images/portrait2.webp" alt="Card image" />
-        <div class="card-body">
-          <h4 class="card-title">PORTRAIT PHOTOSHOOT</h4>
-          <p class="card-text text-start">Let us help you capture your unique
-            personality and style with a
-            personalized portrait session at Katunda Studio. Our experienced
-            photographers will work with you to create a beautiful and timeless
-            portrait that you'll treasure for years to come. We value your
-            needs.</p>
-        </div>
-        <div class="card-footer ">
-
-          <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-      <img class="card-img-top" src="images/Graduation1.webp" alt="Card image" />
-      <div class="card-body">
-        <h4 class="card-title">EVENT PHOTOSHOOT</h4>
-        <p class="card-text text-start">Our event photoshoot package is perfect for
-          capturing memories at
-          your next big event. Our talented photographers at Katunda Studio
-          will capture every moment of your special event, from candid shots
-          to posed group photos. We'll work with you to create a customized
-          photography package that perfectly fits your needs. We capture it
-          all.</p>
-      </div>
-      <div class="card-footer ">
-
-        <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-      <img class="card-img-top" src="images/Indoor2.webp" alt="Card image" />
-      <div class="card-body">
-        <h4 class="card-title">INDOOR PHOTOSHOOT</h4>
-        <p class="card-text text-start">At Katunda Studio, we have a fully equipped
-          indoor photography
-          studio that is perfect for capturing beautiful images in a
-          controlled environment. Our team will work with you to create the
-          perfect lighting and set design to make your photoshoot truly
-          memorable and tailored to your preferences.</p>
-      </div>
-      <div class="card-footer">
-
-        <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-      <img class="card-img-top" src="images/Outdoor1.webp" alt="Card image" />
-      <div class="card-body">
-        <h4 class="card-title">OUTDOOR PHOTOSHOOT</h4>
-        <p class="card-text text-start">Whether you're looking for a stunning natural
-          backdrop or an urban
-          cityscape, our outdoor photoshoots at Katunda Studio will capture
-          the beauty of your surroundings. Our experienced photographers will
-          work with you to find the perfect location and lighting to create
-          truly memorable images. Book your session today.</p>
-      </div>
-      <div class="card-footer">
-
-        <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-      <img class="card-img-top" src="images/Family1.webp" alt="Card image" />
-      <div class="card-body">
-        <h4 class="card-title">FAMILY PHOTOSHOOT </h4>
-        <p class="card-text text-start">Family is everything, and we understand how
-          important it is to
-          capture those special moments with your loved ones. Our family
-          photoshoots at Katunda Studio are designed to be fun, relaxed, and
-          stress-free, so you can focus on making memories while we capture
-          them for you.</p>
-      </div>
-      <div class="card-footer">
-
-        <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-4 col-sm-10 mx-auto mb-3"">
-            <div class=" card border text-center" style="height: 100%;">
-      <img class="card-img-top" src="images/Maternity.webp" alt="Card image" />
-      <div class="card-body">
-        <h4 class="card-title">MATERNITY PHOTOSHOOT</h4>
-        <p class="card-text text-start">Pregnancy is a magical time in a woman's
-          life, and our maternity
-          photoshoots at Katunda Studio are designed to capture the beauty and
-          joy of this special time. Our experienced photographers will work
-          with you to create a personalized session that highlights your
-          unique style and personality.</p>
-      </div>
-      <div class="card-footer">
-
-        <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-      </div>
-    </div>
-    </div>
-    </div>
     </div>
     <div class="container-fluid" id="contact">
       <div class="row my-5">
-        <div class="col-12 mx-auto">
-
+        <div class="col-sm-12 col-md-10 mx-auto">
           <h2 class="text-center mb-3">CONTACT US</h2>
           <ul>
             <li>
@@ -406,24 +411,24 @@
             </li>
           </ul>
 
-          <p class="h3    text-center">OUR SOCIAL MEDIA</p>
+          <p class="h3 text-center">OUR SOCIAL MEDIA</p>
           <div style="width: fit-content;" class="container shadow-lg text-center pt-3 rounded mb-5">
-            <button style="background: none; border: none" class="mx-4">
+            <button style="background: none; border: none" class="mx-4" data-bs-toggle="tooltip" title="Whatsapp">
               <a href="https://wa.link/spbrjr" target="_blank">
-                <i class="bi bi-whatsapp" style="font-size: 40px; color: #00aa1c;"></i><br /><br />
+                <i class="bi bi-whatsapp" style="font-size: 40px; color: #0dd42e;"></i><br /><br />
               </a>
             </button>
-            <button style="background: none; border: none" class="mx-4">
+            <button style="background: none; border: none" class="mx-4" data-bs-toggle="tooltip" title="Instagram">
               <a href="https://instagram.com/katunda_studio_?igshid=YmMyMTA2M2Y=" target="_blank">
                 <i class="bi bi-instagram" style="font-size: 40px; color: #bd2541;"></i><br /><br />
               </a>
             </button>
-            <button style="background: none; border: none" class="mx-4">
+            <button style="background: none; border: none" class="mx-4" data-bs-toggle="tooltip" title="Facebook">
               <a href="https://www.facebook.com/profile.php?id=100072989852203" target="_blank">
                 <i class="bi bi-facebook" style="font-size: 40px; color: #0c2863;"></i><br /><br />
               </a>
             </button>
-            <button style="background: none; border: none" class="mx-4">
+            <button style="background: none; border: none" class="mx-4" data-bs-toggle="tooltip" title="TikTok">
               <a href="https://www.facebook.com/profile.php?id=100072989852203" target="_blank">
                 <i class="bi bi-tiktok" style="font-size: 38px; color: #000000;"></i><br /><br />
               </a>
@@ -431,8 +436,8 @@
           </div>
 
           <p class="h3 text-center">Questions? Don't hesitate to ask below.</p>
-          <form class="form" action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
-            class="p-5 border rounded" />
+          <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
+            class="p-5 border rounded mx-auto shadow-lg" />
           <div class="mb-3 mt-3">
             <label for=" name" class="form-label">Name:</label>
             <input type=" name" class="form-control" id=" name" placeholder="e.g., Valentine Katunda" name="name"
@@ -468,8 +473,8 @@
           <button type="submit" class="btn btn-primary">Submit</button>
           </form>
 
-          <h2 class="   text-center mt-5">You are welcome to visit our studio in Gongo la Mboto</h2>
-          <div class="map my-5 w-75 mx-auto" style="height: 400px;">
+          <h2 class="text-center mt-3">You are welcome to visit our studio in Gongo la Mboto</h2>
+          <div class="map mt-3 col-11 mx-auto" style="height: 400px;">
             <div class="mapouter">
               <div class="gmap_canvas">
                 <iframe width="100%" height="100%" id="gmap_canvas"
@@ -501,16 +506,15 @@
     </div>
     <div class="container-fluid" id="booking">
       <div class="row">
-        <div class="col-12 mx-auto">
+        <div class="col-sm-12 col-md-10 mx-auto">
           <h2 class="text-center">BOOK YOUR SESSION TODAY</h2>
-          <form class="form" action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
-            class="my-5 p-2 border rounded" />
+          <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
+            class="my-5 p-5 border mx-auto shadow-lg rounded" />
           <div class="page-header">
-            <p class="h2 text-center text-muted">JAZA TAARIFA ZOTE KWA USAHIHI</p>
+            <p class="h2 text-center">JAZA TAARIFA ZOTE KWA USAHIHI</p>
           </div>
           <div class="form-floating mb-3 mt-3">
             <input type="text" class="form-control" id="name" placeholder="e.g. David Ismail" name="name" required>
-
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
             <label for="name">Name</label>
@@ -572,9 +576,8 @@
     </div>
     <div class="container-fluid" id="about">
       <div class="row my-5">
-        <h2 class="text-center mb-3">ABOUT US</h2>
-        <div class="col-10 p-3 mx-auto rounded ">
-
+        <h2 class="text-center mb-5">ABOUT US</h2>
+        <div class="col-sm-12 col-md-10 mx-auto">
           <img src="images/EL-GRANDE-MANZILE.webp" alt="" class="float-start mb-3 rounded img-fluid img-thumbnail"
             style="width: 18rem;">
           <div class="clearfix"></div>
@@ -680,7 +683,7 @@
       origin: "right",
     });
 
-    ScrollReveal().reveal(".btn, #about", {
+    ScrollReveal().reveal("#demo, #about", {
       origin: "left"
     });
   </script>
@@ -716,10 +719,18 @@
         document.querySelector('.navbar-collapse').classList.remove('show');
       });
     });
+    const lightSwitch = document.querySelectorAll('#lightSwitch');
+    lightSwitch.forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+      });
+    });
   </script>
 
   <!-- Scroll reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script src="./switch.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
