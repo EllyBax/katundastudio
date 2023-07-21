@@ -95,15 +95,14 @@
     }
 
     @media (max-width: 400px) {
-    .card-img-top {
-    height: 35rem;
-    }
+      .card-img-top {
+        height: 35rem;
+      }
     }
 
-    .card-body .bi{
+    .card-body .bi {
       font-size: 1.5rem;
     }
-
   </style>
 </head>
 
@@ -139,6 +138,13 @@
                 Now</button></a>
           </li>
         </ul>
+        <!-- Theme Toggle Button -->
+        <div class="form-check form-switch me-0 my-0">
+          <label class="form-check-label" for="lightSwitch">
+            <i class="bi bi-brightness-high"></i>
+          </label>
+          <input class="form-check-input" type="checkbox" id="lightSwitch" />
+        </div>
       </div>
     </div>
   </nav>
@@ -430,7 +436,7 @@
   </footer>
   <a href="#" class="top">&#8593;</a>
 
-
+  <script src="./switch.js"></script>
   <!-- Custom JavaScript -->
   <script>
     // Show/hide back to top button based on scroll position
