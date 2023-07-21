@@ -188,13 +188,6 @@
             <a class="nav-link" href="./gallery.html">Gallery</a>
           </li>
         </ul>
-        <!-- Theme Toggle Button
-        <div class="form-check form-switch me-0 my-0">
-          <label class="form-check-label" for="lightSwitch">
-            <i class="bi bi-brightness-high"></i>
-          </label>
-          <input class="form-check-input" type="checkbox" id="lightSwitch" />
-        </div> -->
       </div>
     </div>
   </nav>
@@ -436,42 +429,49 @@
           </div>
 
           <p class="h3 text-center">Questions? Don't hesitate to ask below.</p>
-          <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
-            class=" px-2 py-5 border rounded mx-auto shadow-lg" />
-          <div class="mb-3 mt-3">
-            <label for=" name" class="form-label">Name:</label>
-            <input type=" name" class="form-control" id=" name" placeholder="e.g., Valentine Katunda" name="name"
-              required />
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
+                  class="px-2 py-5 border rounded mx-auto shadow-lg">
+                  <div class="mb-3 mt-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="e.g., Valentine Katunda" name="name"
+                      required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" class="form-control" id="phone"
+                      placeholder="Phone number" name="phone" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com (optional)"
+                      name="email" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="comment">Comments:</label>
+                    <textarea class="form-control" rows="5" id="comment" name="comments" placeholder="Write something"
+                      required></textarea>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="remember" />
+                      Send promotional emails and messages
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="pwd" class="form-label">Phone:</label>
-            <input type="tel" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" class="form-control" id="phone"
-              placeholder="Phone number" name="phone" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-          </div>
-          <div class="mb-3 mt-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="example@gmail.com (optional)"
-              name="email" />
-          </div>
-          <div class="mb-3">
-            <label for="comment">Comments:</label>
-            <textarea class="form-control" rows="5" id="comment" name="comments" placeholder="Write something"
-              required></textarea>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-          </div>
-          <div class="form-check mb-3">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="remember" />
-              Send promotional emails and messages
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+
 
           <h2 class="text-center mt-3">You are welcome to visit our studio in Gongo la Mboto</h2>
           <div class="map mt-3 col-11 mx-auto" style="height: 400px;">
@@ -508,69 +508,70 @@
       <div class="row">
         <div class="col-sm-12 col-md-10 mx-auto">
           <h2 class="text-center">BOOK YOUR SESSION TODAY</h2>
-          <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
-            class="my-5 px-2 py-5 border mx-auto shadow-lg rounded" />
-          <div class="page-header">
-            <p class="h2 text-center">JAZA TAARIFA ZOTE KWA USAHIHI</p>
-          </div>
-          <div class="form-floating mb-3 mt-3">
-            <input type="text" class="form-control" id="name" placeholder="e.g. David Ismail" name="name" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-            <label for="name">Name</label>
-          </div>
-          <div class="form-floating mb-3 mt-3">
-            <input type="tel" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" class="form-control" id="phone"
-              placeholder="Phone number" name="phone" required>
+          <div class="col-lg-8 offset-lg-2">
+            <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
+              class="my-5 px-2 py-5 border mx-auto shadow-lg rounded" />
+            <div class="page-header">
+              <p class="h2 text-center">JAZA TAARIFA ZOTE KWA USAHIHI</p>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="name" placeholder="e.g. David Ismail" name="name" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+              <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input type="tel" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" class="form-control" id="phone"
+                placeholder="Phone number" name="phone" required>
 
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-            <label for="phone">Phone</label>
-          </div>
-          <div class="form-floating mb-3 mt-3">
-            <input type="text" class="form-control" id="email" placeholder="Enter email (Optional)" name="email">
-            <label for="email">Email</label>
-          </div>
-          <div class="elem-group inlined form-floating mb-3 mt-3">
-            <input type="number" class="form-control" id="adults" name="adults" placeholder="2" min="1" required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+              <label for="phone">Phone</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="email" placeholder="Enter email (Optional)" name="email">
+              <label for="email">Email</label>
+            </div>
+            <div class="elem-group inlined form-floating mb-3 mt-3">
+              <input type="number" class="form-control" id="adults" name="adults" placeholder="2" min="1" required />
 
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-            <label for="adults">Watu wazima</label>
-          </div>
-          <div class="elem-group inlined form-floating mb-3 mt-3">
-            <input type="number" class="form-control" id="children" name="children" placeholder="0" min="0" />
-            <label for="children">Watoto</label>
-          </div>
-          <div class="elem-group in-lined form-floating mb-3 mt-3">
-            <input type="date" class="form-control" id="checkin-date" name="checkin" required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+              <label for="adults">Watu wazima</label>
+            </div>
+            <div class="elem-group inlined form-floating mb-3 mt-3">
+              <input type="number" class="form-control" id="children" name="children" placeholder="0" min="0" />
+              <label for="children">Watoto</label>
+            </div>
+            <div class="elem-group in-lined form-floating mb-3 mt-3">
+              <input type="date" class="form-control" id="checkin-date" name="checkin" required />
 
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-            <label for="checkin-date">Tarehe ya shughuli</label>
-          </div>
-          <div class="form-floating mb-3 mt-3">
-            <select class="form-select" id="selection" name="selectedService" required>
-              <option selected>Event Video Shoot</option>
-              <option value="Video">Portraits Photoshoot</option>
-              <option value="Indoor">Indoor Photoshoot</option>
-              <option value="Outdoor">Outdoor Photoshoot</option>
-              <option value="Maternity">Maternity Photoshoot</option>
-              <option value="Family">Family Photoshoot</option>
-            </select>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+              <label for="checkin-date">Tarehe ya shughuli</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <select class="form-select" id="selection" name="selectedService" required>
+                <option value="video" selected>Event Video Shoot</option>
+                <option value="portrait">Portraits Photoshoot</option>
+                <option value="Indoor">Indoor Photoshoot</option>
+                <option value="Outdoor">Outdoor Photoshoot</option>
+                <option value="Maternity">Maternity Photoshoot</option>
+                <option value="Family">Family Photoshoot</option>
+              </select>
 
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-            <label for="selection" class="form-label">Chagua huduma kwenye orodha</label>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+              <label for="selection" class="form-label">Chagua huduma kwenye orodha</label>
+            </div>
+            <div class="form-floating my-3">
+              <textarea class="form-control" id="comment" name="comment" rows="5"
+                placeholder="Comment goes here"></textarea>
+              <label for="comment">Comments</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
-          <div class="form-floating my-3">
-            <textarea class="form-control" id="comment" name="comment" rows="5"
-              placeholder="Comment goes here"></textarea>
-            <label for="comment">Comments</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-
         </div>
       </div>
     </div>
@@ -727,11 +728,7 @@
     });
   </script>
 
-  <!-- Scroll reveal -->
-  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-
   <script src="./switch.js"></script>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
