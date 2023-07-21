@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -48,7 +48,7 @@
     :root {
       --bg-color: #171620;
       --second-bg-color: #fc8a00;
-      --third-bg-color: rgb(1, 24, 58);
+      --third-bg-color: rgb(29, 100, 207);
       --text-color: #f0e113;
     }
 
@@ -149,8 +149,14 @@
     }
 
     .card-img-top {
-      height: 20rem;
+      height: 30rem;
       object-position: top;
+    }
+
+    @media (max-width: 868px) {
+      .card-img-top{
+        height: 20rem;
+      }
     }
   </style>
 </head>
@@ -267,7 +273,7 @@
       <div class="row my-5">
         <h2 class="text-center mb-5">OUR SERVICES</h2>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class="card border text-center" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="images/video.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">VIDEO RECORDING</h4>
@@ -280,12 +286,12 @@
             </div>
             <div class="card-footer">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class=" card border text-center shadow-lg" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="images/portrait.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">PORTRAITS</h4>
@@ -298,12 +304,12 @@
             </div>
             <div class="card-footer ">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class=" card border text-center shadow-lg" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="images/wedding.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">EVENT PHOTOSHOOT</h4>
@@ -317,12 +323,12 @@
             </div>
             <div class="card-footer ">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class=" card border text-center shadow-lg" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="images/indoor.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">INDOOR PHOTOSHOOT</h4>
@@ -335,12 +341,12 @@
             </div>
             <div class="card-footer">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class=" card border text-center shadow-lg" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="images/outdoor.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">OUTDOOR PHOTOSHOOT</h4>
@@ -353,12 +359,30 @@
             </div>
             <div class="card-footer">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class=" card border text-center shadow-lg" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
+            <img class="card-img-top" style="object-fit: cover;" src="images/birthday.webp" alt="Card image" />
+            <div class="card-body">
+              <h4 class="card-title">BIRTHDAYS</h4>
+              <p class="card-text text-start">Family is everything, and we understand how
+                important it is to
+                capture those special moments with your loved ones. Our family
+                photoshoots at Katunda Studio are designed to be fun, relaxed, and
+                stress-free, so you can focus on making memories while we capture
+                them for you.</p>
+            </div>
+            <div class="card-footer">
+
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="images/family.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">FAMILY PHOTOSHOOT</h4>
@@ -371,12 +395,12 @@
             </div>
             <div class="card-footer">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mx-auto mb-4">
-          <div class=" card border text-center shadow-lg" style="height: 100%;">
+          <div class=" card bg-dark text-center shadow-lg" style="height: 100%;">
             <img class="card-img-top" style="object-fit: cover;" src="./images/maternity.webp" alt="Card image" />
             <div class="card-body">
               <h4 class="card-title">MATERNITY PHOTOSHOOT</h4>
@@ -389,7 +413,7 @@
             </div>
             <div class="card-footer">
 
-              <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+              <a href="#booking" class="btn btn-primary rounded-5">BOOK NOW</a>
             </div>
           </div>
         </div>
@@ -517,130 +541,159 @@
           <h2 class="text-center">BOOK YOUR SESSION TODAY</h2>
           <div class="col-lg-8 offset-lg-2">
             <form action="https://formsubmit.co/2f2e234dbcabc378bc2d9a36c34b9a9e" method="POST"
-              class="my-5 px-2 py-5 border mx-auto shadow-lg rounded" />
-            <div class="page-header">
-              <p class="h2 text-center">JAZA TAARIFA ZOTE KWA USAHIHI</p>
-            </div>
-            <div class="form-floating mb-3 mt-3">
-              <input type="text" class="form-control" id="name" placeholder="e.g. David Ismail" name="name" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-              <label for="name">Name</label>
-            </div>
-            <div class="form-floating mb-3 mt-3">
-              <input type="tel" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" class="form-control" id="phone"
-                placeholder="Phone number" name="phone" required>
+              class="my-5 px-2 py-5 border mx-auto shadow-lg rounded">
+              <div class="page-header">
+                <p class="h2 text-center">JAZA TAARIFA ZOTE KWA USAHIHI</p>
+              </div>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control bg-dark" id="name" placeholder="e.g. David Ismail"
+                      name="name" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <label for="name">Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3 mt-3">
+                    <input type="tel" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" class="form-control bg-dark" id="phone"
+                      placeholder="Phone number" name="phone" required>
 
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-              <label for="phone">Phone</label>
-            </div>
-            <div class="form-floating mb-3 mt-3">
-              <input type="text" class="form-control" id="email" placeholder="Enter email (Optional)" name="email">
-              <label for="email">Email</label>
-            </div>
-            <div class="elem-group inlined form-floating mb-3 mt-3">
-              <input type="number" class="form-control" id="adults" name="adults" placeholder="2" min="1" required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <label for="phone">Phone</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control bg-dark" id="email" placeholder="Enter email (Optional)"
+                      name="email">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="elem-group inlined form-floating mb-3 mt-3">
+                    <input type="number" class="form-control bg-dark" id="adults" name="adults" placeholder="2" min="1"
+                      required />
 
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-              <label for="adults">Watu wazima</label>
-            </div>
-            <div class="elem-group inlined form-floating mb-3 mt-3">
-              <input type="number" class="form-control" id="children" name="children" placeholder="0" min="0" />
-              <label for="children">Watoto</label>
-            </div>
-            <div class="elem-group in-lined form-floating mb-3 mt-3">
-              <input type="date" class="form-control" id="checkin-date" name="checkin" required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <label for="adults">Watu wazima</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <div class="elem-group inlined form-floating mb-3 mt-3">
+                    <input type="number" class="form-control bg-dark" id="children" name="children" placeholder="0"
+                      min="0" />
+                    <label for="children">Watoto</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="elem-group in-lined form-floating mb-3 mt-3">
+                    <input type="date" class="form-control" id="checkin-date" name="checkin" required />
 
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-              <label for="checkin-date">Tarehe ya shughuli</label>
-            </div>
-            <div class="form-floating mb-3 mt-3">
-              <select class="form-select" id="selection" name="selectedService" required>
-                <option value="video" selected>Event Video Shoot</option>
-                <option value="portrait">Portraits Photoshoot</option>
-                <option value="Indoor">Indoor Photoshoot</option>
-                <option value="Outdoor">Outdoor Photoshoot</option>
-                <option value="Maternity">Maternity Photoshoot</option>
-                <option value="Family">Family Photoshoot</option>
-              </select>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <label for="checkin-date">Tarehe ya shughuli</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md-12">
+                  <div class="form-floating mb-3 mt-3">
+                    <select class="form-select" id="selection" name="selectedService" required>
+                      <option value="video" selected>Event Video Shoot</option>
+                      <option value="portrait">Portraits Photoshoot</option>
+                      <option value="Indoor">Indoor Photoshoot</option>
+                      <option value="Outdoor">Outdoor Photoshoot</option>
+                      <option value="Maternity">Maternity Photoshoot</option>
+                      <option value="Family">Family Photoshoot</option>
+                    </select>
 
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-              <label for="selection" class="form-label">Chagua huduma kwenye orodha</label>
-            </div>
-            <div class="form-floating my-3">
-              <textarea class="form-control" id="comment" name="comment" rows="5"
-                placeholder="Comment goes here"></textarea>
-              <label for="comment">Comments</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <label for="selection" class="form-label">Chagua huduma kwenye orodha</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md-12">
+                  <div class="form-floating my-3">
+                    <textarea class="form-control bg-dark" id="comment" name="comment" rows="5"
+                      placeholder="Comment goes here"></textarea>
+                    <label for="comment">Comments</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid" id="about">
-      <div class="row my-5">
-        <h2 class="text-center mb-5">ABOUT US</h2>
-        <div class="col-sm-12 col-md-10 mx-auto">
-          <img src="images/EL-GRANDE-MANZILE.webp" alt="" class="float-start mb-3 rounded img-fluid img-thumbnail"
-            style="width: 18rem;">
-          <div class="clearfix"></div>
-          <p class=" ">
-            At Katunda Studio, we believe that every moment in life is special
-            and deserves to be captured in its full beauty. That's why we offer
-            a wide range of photography and videography services to help our
-            clients celebrate and preserve their precious memories. Our studio
-            was founded in 2021 and is located in the heart of Gongo la Mboto,
-            Majohe. Since then, we have built a trusted customer base that has
-            made us their go-to destination for professional photography and
-            videography services.
-            <br>
-            <br>
-            Our team of talented photographers and videographers are passionate
-            about their craft and always strive to exceed our clients'
-            expectations. We use state-of-the-art equipment and innovative
-            techniques to capture stunning images and create timeless videos
-            that tell a story. Whether it's an event photoshoot, video
-            recording, portrait session, indoor or outdoor photoshoot, family
-            photoshoot, or maternity photoshoot, we work with our clients to
-            tailor our services to their unique needs.
-            <br>
-            <br>
-            We understand that every client is different, and that's why we take
-            the time to get to know our clients and their vision. Our
-            personalized approach allows us to create a comfortable and fun
-            environment where our clients can relax and be themselves. We
-            believe that this is the key to capturing natural and authentic
-            moments that our clients can cherish for a lifetime.
-            <br>
-            <br>
-            At Katunda Studio, our motto is "We capture it all!" and we take
-            that very seriously. We know that life moves fast and that every
-            moment is precious. That's why we're committed to providing our
-            clients with the highest quality photography and videography
-            services to help them celebrate and preserve their memories. So
-            whether it's a wedding, a graduation, a family gathering, or simply
-            a day in the park, we're here to help you capture it all!
-            <br>
-            <br>
+      <div class="container-fluid" id="about">
+        <div class="row my-5">
+          <h2 class="text-center mb-5">ABOUT US</h2>
+          <div class="col-sm-12 col-md-10 mx-auto">
+            <img src="images/EL-GRANDE-MANZILE.webp" alt="" class="float-start mb-3 rounded img-fluid img-thumbnail"
+              style="width: 18rem;">
+            <div class="clearfix"></div>
+            <p class=" ">
+              At Katunda Studio, we believe that every moment in life is special
+              and deserves to be captured in its full beauty. That's why we offer
+              a wide range of photography and videography services to help our
+              clients celebrate and preserve their precious memories. Our studio
+              was founded in 2021 and is located in the heart of Gongo la Mboto,
+              Majohe. Since then, we have built a trusted customer base that has
+              made us their go-to destination for professional photography and
+              videography services.
+              <br>
+              <br>
+              Our team of talented photographers and videographers are passionate
+              about their craft and always strive to exceed our clients'
+              expectations. We use state-of-the-art equipment and innovative
+              techniques to capture stunning images and create timeless videos
+              that tell a story. Whether it's an event photoshoot, video
+              recording, portrait session, indoor or outdoor photoshoot, family
+              photoshoot, or maternity photoshoot, we work with our clients to
+              tailor our services to their unique needs.
+              <br>
+              <br>
+              We understand that every client is different, and that's why we take
+              the time to get to know our clients and their vision. Our
+              personalized approach allows us to create a comfortable and fun
+              environment where our clients can relax and be themselves. We
+              believe that this is the key to capturing natural and authentic
+              moments that our clients can cherish for a lifetime.
+              <br>
+              <br>
+              At Katunda Studio, our motto is "We capture it all!" and we take
+              that very seriously. We know that life moves fast and that every
+              moment is precious. That's why we're committed to providing our
+              clients with the highest quality photography and videography
+              services to help them celebrate and preserve their memories. So
+              whether it's a wedding, a graduation, a family gathering, or simply
+              a day in the park, we're here to help you capture it all!
+              <br>
+              <br>
 
-            - Emmanuel Valentine
-            <br>
-            <br>- C.E.O
-          </p>
+              - Emmanuel Valentine
+              <br>
+              <br>- C.E.O
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
   </main>
   <footer class="footer mt-auto text-center p-3">
     <hr>
     <div class="container">
-      <span class="text-muted">Copyrights Reserved <a style="text-decoration: none;"
+      <span>Copyrights Reserved <a style="text-decoration: none;"
           href="https://baxllydevs.com/">Baxlly
           Devs</a>&copy;</span>
     </div>
