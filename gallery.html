@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KATUNDA STUDIO GALLERY</title>
+  <link rel="shortcut icon" href="images/logo-nb.webp" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous" />
+
+  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --bg-color: #171620;
+      --second-bg-color: #fc8a00;
+      --text-color: #f0e113;
+    }
+
+    html {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #portrait-tab,
+    #indoor-tab,
+    #outdoor-tab {
+      font-weight: bold;
+    }
+
+    #mynavbar ul li a {
+      color: var(--second-bg-color);
+      transition: all .8s;
+    }
+
+    #mynavbar ul li a:hover {
+      transform: scale(1.15);
+      color: #000000;
+    }
+
+    .navbar-brand {
+      transition: all 1s;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.5);
+    }
+
+    #booknow {
+      background-color: var(--second-bg-color);
+      color: #000000;
+      transition: all 1s;
+    }
+
+    #booknow:hover {
+      color: var(--second-bg-color);
+      background-color: #000000;
+    }
+
+    .top {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 24px;
+      line-height: 40px;
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .top:hover {
+      opacity: 1;
+    }
+
+    .card-img-top {
+      height: 50rem;
+      object-position: center;
+      object-fit: cover;
+    }
+
+    @media (max-width: 848px) {
+      .card-img-top {
+        height: 40rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .card-img-top {
+        height: 35rem;
+      }
+    }
+
+    .card-body .bi {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm shadow-lg mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html#top">
+        <img src="images/logo-nb.webp" style="width: 80px;" alt="" class="img-fluid">
+        <!-- KATUNDA STUDIO -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#contact">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#./index.html#services" role="button"
+              data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item" href="./index.html#services">Video Shoot</a></li>
+              <li><a class="dropdown-item" href="./index.html#services">Photoshoot</a></li>
+              <li><a class="dropdown-item" href="./index.html#about">About Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#booking"><button id="booknow" class="btn btn-sm">Book
+                Now</button></a>
+          </li>
+        </ul>
+        <!-- Theme Toggle Button -->
+        <div class="form-check form-switch me-0 my-0">
+          <label class="form-check-label" for="lightSwitch">
+            <i class="bi bi-brightness-high"></i>
+          </label>
+          <input class="form-check-input" type="checkbox" id="lightSwitch" />
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-center mt-3" style="color: var(--second-bg-color); font-weight: bold;">VIEW OUR WORK</h1>
+    <div class="container-fluid sticky-top bg-light">
+      <ul class="nav justify-content-center bg-light my-5 pt-3 nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="portrait-tab" data-bs-toggle="tab" data-bs-target="#portrait-tab-pane"
+            type="button" role="tab" aria-controls="portrait-tab-pane" aria-selected="true">Portraits</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="indoor-tab" data-bs-toggle="tab" data-bs-target="#indoor-tab-pane" type="button"
+            role="tab" aria-controls="indoor-tab-pane" aria-selected="false">Indoor</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="outdoor-tab" data-bs-toggle="tab" data-bs-target="#outdoor-tab-pane"
+            type="button" role="tab" aria-controls="outdoor-tab-pane" aria-selected="false">Outdoor</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
+            type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Our
+            Gallery</button>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="portrait-tab-pane" role="tabpanel" aria-labelledby="portrait-tab"
+        tabindex="0">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 2.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 3.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 4.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 5.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 6.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 7.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 8.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/portraits/portraits 1.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="indoor-tab-pane" role="tabpanel" aria-labelledby="indoor-tab" tabindex="0">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 1.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 2.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 3.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 4.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 5.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 6.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 7.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 8.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 9.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/indoors/indoors 10.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="outdoor-tab-pane" role="tabpanel" aria-labelledby="outdoor-tab" tabindex="0">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 1.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 2.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 3.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 4.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 5.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 6.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 7.webp" class="card-img-top rounded shadow-lg" alt="Image 1">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-dark mb-3 border-0" style="height: 100%;">
+              <img src="images/outdoors/outdoors 8.webp" class="card-img-top rounded shadow-lg" alt="Image 2">
+              <div class="card-body">
+                <i type="button" class="bi bi-heart btn btn-outline-danger border-0 float-end" data-bs-toggle="button"
+                  data-bs-target="#likeButton" aria-pressed="false" style="font-weight: bold;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+        <!-- Merch or something-->
+      </div>
+    </div>
+  </div>
+  <footer class="footer mt-auto text-center p-3">
+    <hr>
+    <div class="container">
+      <span>Copyrights Reserved <a style="text-decoration: none;"
+          href="https://baxllydevs.com/">Baxlly
+          Devs</a>&copy;</span>
+    </div>
+  </footer>
+  <a href="#" class="top">&#8593;</a>
+
+  <script src="./switch.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Show/hide back to top button based on scroll position
+    window.addEventListener("scroll", function () {
+      var backToTopButton = document.querySelector(".top");
+      if (window.pageYOffset > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+
+    // Function to scroll to the top of the page
+    document.querySelector(".top").addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <script>
+    // Close the navbar when a link is clicked
+    const navLinks = document.querySelectorAll('.navbar-nav li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+      });
+    });
+    const lightSwitch = document.querySelectorAll('#lightSwitch');
+    lightSwitch.forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
