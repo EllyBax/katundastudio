@@ -32,13 +32,13 @@
     }
 
     #mynavbar ul li a {
-      color: var(--second-bg-color);
+      /* color: var(--second-bg-color); */
       transition: all .8s;
     }
 
     #mynavbar ul li a:hover {
       transform: scale(1.15);
-      color: #000000;
+      /* color: #000000; */
     }
 
     .navbar-brand {
@@ -50,14 +50,8 @@
     }
 
     #booknow {
-      background-color: var(--second-bg-color);
-      color: #000000;
+      background-color: blue;
       transition: all 1s;
-    }
-
-    #booknow:hover {
-      color: var(--second-bg-color);
-      background-color: #000000;
     }
 
     .top {
@@ -107,7 +101,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm shadow-lg mb-5">
+  <nav class="navbar navbar-expand-sm shadow-lg mb-5 navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="./index.html#top">
         <img src="images/logo-nb.webp" style="width: 80px;" alt="" class="img-fluid">
@@ -151,8 +145,8 @@
 
   <div class="container">
     <h1 class="text-center mt-3" style="color: var(--second-bg-color); font-weight: bold;">VIEW OUR WORK</h1>
-    <div class="container-fluid sticky-top bg-light">
-      <ul class="nav justify-content-center bg-light my-5 pt-3 nav-tabs" id="myTab" role="tablist">
+    <div class="container-fluid sticky-top bg-dark">
+      <ul class="nav justify-content-center bg-dark my-5 pt-3 nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="portrait-tab" data-bs-toggle="tab" data-bs-target="#portrait-tab-pane"
             type="button" role="tab" aria-controls="portrait-tab-pane" aria-selected="true">Portraits</button>
